@@ -1,0 +1,35 @@
+{
+	"name": "ahsan/auth",
+	"description": "The Illuminate Auth package.",
+	"license": "MIT",
+	"homepage": "https://laravel.com",
+	"support": {
+		"issues": "https://github.com/laravel/framework/issues",
+		"source": "https://github.com/laravel/framework"
+	},
+	"authors": [
+		{
+			"name": "Taylor Otwell",
+			"email": "taylor@laravel.com"
+		}
+	],
+	"require": {
+		"php": ">=5.6.4",
+	},
+	"autoload": {
+		"psr-4": {
+			"Ahsan\\Auth\\": ""
+		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "5.3-dev"
+		}
+	},
+	"suggest": {
+		"illuminate/console": "Required to use the auth:clear-resets command (5.3.*).",
+		"illuminate/queue": "Required to fire login / logout events (5.3.*).",
+		"illuminate/session": "Required to use the session based guard (5.3.*)."
+	},
+	"minimum-stability": "dev"
+}

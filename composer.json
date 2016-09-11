@@ -1,16 +1,55 @@
 {
-	"name": "codesgo/ahsan",
-	"description": "some description here for Laravel Ahsan",
+	"name": "codesgo/ahsan-core",
+	"description": "The Laravel Framework.",
+	"keywords": ["framework", "laravel"],
+	"license": "MIT",
+	"homepage": "https://laravel.com",
+	"support": {
+		"issues": "https://github.com/laravel/framework/issues",
+		"source": "https://github.com/laravel/framework"
+	},
+	"authors": [
+		{
+			"name": "Taylor Otwell",
+			"email": "taylor@laravel.com"
+		}
+	],
 	"require": {
-		"laravel/laravel": "^5.3"
+		"php": ">=5.6.4"
+	},
+	"replace": {
+		"Ahsan/auth": "self.version"
+	},
+	"require-dev": {
+		"mockery/mockery": "~0.9.4"
 	},
 	"autoload": {
-		"psr-4": {
-			"Codesgo\\Ahsan\\": "/"
-		},
 		"files": [
-			"app/Support/helpers.php"
-		]
+			"src/Illuminate/Foundation/helpers.php",
+			"src/Illuminate/Support/helpers.php"
+		],
+		"psr-4": {
+			"Ahsan\\": "src/Ahsan/"
+		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "5.3-dev"
+		}
+	},
+	"suggest": {
+		"aws/aws-sdk-php": "Required to use the SQS queue driver and SES mail driver (~3.0).",
+		"doctrine/dbal": "Required to rename columns and drop SQLite columns (~2.4).",
+		"fzaninotto/faker": "Required to use the eloquent factory builder (~1.4).",
+		"guzzlehttp/guzzle": "Required to use the Mailgun and Mandrill mail drivers and the ping methods on schedules (~5.3|~6.0).",
+		"league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (~1.0).",
+		"league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0).",
+		"pda/pheanstalk": "Required to use the beanstalk queue driver (~3.0).",
+		"predis/predis": "Required to use the redis cache and queue drivers (~1.0).",
+		"pusher/pusher-php-server": "Required to use the Pusher broadcast driver (~2.0).",
+		"symfony/css-selector": "Required to use some of the crawler integration testing tools (3.1.*).",
+		"symfony/dom-crawler": "Required to use most of the crawler integration testing tools (3.1.*).",
+		"symfony/psr-http-message-bridge": "Required to psr7 bridging features (0.2.*)."
 	},
 	"minimum-stability": "dev"
 }
